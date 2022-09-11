@@ -1,0 +1,348 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel Aquilino Ndong" />
+    <title>Flex style</title>
+    <link rel="stylesheet" href="styles/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/jpg" href="styles/assets/favicon.jpg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="header__nav__container">
+                <div class="nav__link__container">
+                    <a href="">
+                        <img src="https://b.entrepeliculasyseries.me/peliculasyseries/logomin.png" alt="">
+                    </a>
+                    <!-- Boton de Hamburguesa -->
+                    <div class="menuBoton ">
+                        <i class="fa fa-bars" aria-hidden="true" style="color: rgb(255, 255, 255)"></i>
+                    </div>
+                    <ul class="header__list">
+                        <li>
+                            Inicio
+                        </li>
+                        <li class="aft">
+                            Géneros
+                            <img src="" alt="">
+                        </li>
+                        <li class="aft">
+                            Películas
+                            <img src="" alt="">
+                        </li>
+                        <li class="aft">
+                            Series
+                            <img src="" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <!-- Boton de buscar -->
+                <div class="nav__form__container ">
+                    <form>
+                        <div>
+                            <input autocomplete="off" type="search" name="busqueda" id="buscar" placeholder="Buscar películas...">
+                            <img src="" alt="">
+                        </div>
+                    </form>
+                </div>
+                <!-- -------- -->
+            </div>
+        </nav>
+        <section class="header__caroussel__container">
+            <div class="caroussel__item__body">
+                <header>
+                    <h2>Minions: El origen de Gru</h2>
+                </header>
+                <div>
+                    <p>
+                        <span class="calf">3.5/5</span>  2h 28m  2022 <span class="quality">HD</span>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        &#128075; Buenas Profe! Estamos en obras... <br> La actividad práctica la encontrará en la seccion de "TOP ESTRENOS", el codigo de dicha seccion la verá <strong>apartir de la línea 395 de CSS</strong> .
+                    </p>
+                </div>
+                <a class="fa fa-play">Ver Película</a>
+            </div>
+            <div class="caroussel__pointer">
+                <div href=""></div>
+                <div href=""></div>
+                <div href=""></div>
+                <div href=""></div>
+                <div href=""></div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="container">
+            <section class="lastEntry">
+                <header class="lastEntry__header">
+                    <div>
+                        <h2>EntrePeliculasySeries</h2>
+                        <h2> Últimos EPs</h2>
+                    </div>
+                    <div>
+                        <a>Ver mas series</a>
+                    </div>
+                </header>
+                <div class="lastEntry__body__container">
+                    <article class="lastEntry__body">
+                        <figure class="lastEntry__body__items" id="fig1">
+                            <figcaption>Pie de imagen 1</figcaption>
+                        </figure>
+                        <figure class="lastEntry__body__items" id="fig2">
+                            <figcaption>Pie de imagen 2</figcaption>
+                        </figure>
+                        <figure class="lastEntry__body__items" id="fig3">
+                            <figcaption>Pie de imagen 3</figcaption>
+                        </figure>
+                        <figure class="lastEntry__body__items" id="fig4">
+                            <figcaption>Pie de imagen 4</figcaption>
+                        </figure>
+                    </article>
+                </div>
+                <div class="lastEntry__pointers">
+                    <a href="#fig1">1</a>
+                    <a href="#fig2">2</a>
+                    <a href="#fig3">3</a>
+                    <a href="#fig4">4</a>
+                </div>
+                <div class="lastEntry__random__image">
+                    <img src="https://b.entrepeliculasyseries.me/cueva/got.png" alt="">
+                </div>
+            </section>
+            <section class="onlineFilm">
+                <header class="onlineFilm__header">
+                    <h2>Peliculas Online</h2>
+                    <div class="">
+                        <ul>
+                            <li class="active">ÚLTIMAS</li>
+                            <li>ESTRENOS</li>
+                            <li>RANKING</li>
+                            <li>MÁS VISTAS</li>
+                        </ul>
+                    </div>
+                </header>
+                <article class="onlineFilm__body">
+                    <div class="onlineFilm__body__item">
+                        <figure class="item">
+                            <img src="https://tbmdcnd.xyz/p/v2/w1/mk4xETrRSvnVcu2Hi.webp" alt="">
+                            <figcaption>One the line</figcaption>
+                        </figure>
+                    </div>
+                    <div class="onlineFilm__body__item">
+                        <figure class="item">
+                            <img src="https://tbmdcnd.xyz/p/v2/w1/ZFLHqBhTETQZNWnR7g820PEAWMHrdp13V.webp" alt="">
+                            <figcaption>Un pliegue en el tiempo</figcaption>
+                        </figure>
+                    </div>
+                    <div class="onlineFilm__body__item">
+                        <figure class="item">
+                            <img src="https://tbmdcnd.xyz/p/v2/w1/SEA1ASMoXctYkAH4w9MV8Ppkg1DbIQOrlf.webp" alt="">
+                            <figcaption>Un héroe samurai: La leyende de Hang</figcaption>
+                        </figure>
+                    </div>
+                    <div class="onlineFilm__body__item">
+                        <figure class="item">
+                            <img src="https://tbmdcnd.xyz/p/v2/w1/IeecjWrZMPDwS54VKQKCG.webp" alt="">
+                            <figcaption>The Irish Connection</figcaption>
+                        </figure>
+                    </div>
+                    <div class="onlineFilm__body__item">
+                        <figure class="item">
+                            <img src="https://tbmdcnd.xyz/p/v2/w1/5RFxATTxZgVfZk6HeYVlnwMvUmR7l6.webp" alt="">
+                            <figcaption>Minions: El origen de Gru</figcaption>
+                        </figure>
+                    </div>
+                    <div class="onlineFilm__body__item">
+                        <figure class="item">
+                            <img src="https://tbmdcnd.xyz/p/v2/w1/vgalenWYFnKDUKylddwuqY3qFWYeAL1VS17WfTL.webp" alt="">
+                            <figcaption>Top Gun: Maverick</figcaption>
+                        </figure>
+                    </div>
+                    <div class="onlineFilm__body__item">
+                        <figure class="item">
+                            <img src="https://tbmdcnd.xyz/p/v2/w1/zIbaejBtN50Td0NlwkPrufUJJ.webp" alt="">
+                            <figcaption>Todo es posible</figcaption>
+                        </figure>
+                    </div>
+                    <div class="onlineFilm__body__item">
+                        <figure class="item">
+                            <img src="https://tbmdcnd.xyz/p/v2/w1/jnZO2Y3ARUIvpdyw51OE.webp" alt="">
+                            <figcaption>Mirreyes vs Godínez</figcaption>
+                        </figure>
+                    </div>
+                </article>
+                    <button class="btn__cargarPeliculas" action="www.google.com">
+                       Cargar mas películas
+                    </button>
+            </section>
+            <section class="seriesOnline">
+                <header class="seriesOnline__header">
+                    <div>
+                        <h2>Series <br> Online</h2>
+                        <a href="">Ver mas series</a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="active">ÚLTIMAS</li>
+                            <li>ESTRENOS</li>
+                            <li>RANKING</li>
+                            <li>MÁS VISTAS</li>
+                        </ul>
+                    </div>
+                </header>
+                <article class="seriesOnline__body">
+                   <div class="seriesOnline__container">
+                    <div class="seriesOnline__body__item">
+                        <figure>
+                            <img src="" alt="">
+                            <figcaption>
+                                <p>3 Temporada</p>
+                                <p>Caption</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="seriesOnline__body__item">
+                        <figure>
+                            <img src="" alt="">
+                            <figcaption>
+                                <p>3 Temporada</p>
+                                <p>Caption</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="seriesOnline__body__item">
+                        <figure>
+                            <img src="" alt="">
+                            <figcaption>
+                                <p>3 Temporada</p>
+                                <p>Caption</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="seriesOnline__body__item">
+                        <figure>
+                            <img src="" alt="">
+                            <figcaption>
+                                <p>3 Temporada</p>
+                                <p>Caption</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                   </div>
+                </article>
+            </section>
+        </section>
+    <aside>
+        <section class="languages__section">
+            <div>
+                <h3>FILTRAR PELICULAS POR IDIOMA</h3>
+            </div>
+            <div>
+                <img src="https://b.entrepeliculasyseries.me//cueva/latino.svg" alt="italiano">
+                <img src="https://b.entrepeliculasyseries.me//cueva/espana.svg" alt="español">
+                <img src="https://b.entrepeliculasyseries.me//cueva/subti.svg" alt="ingles">
+            </div>
+        </section>
+        <!-- aside__section__films -->
+        <section class="top__estrenos">
+            <div>
+                <h3>TOP ESTRENOS</h3>
+            </div>
+            <article>
+                <div class="card__item">
+                    <div class="card__item__img">
+                        <img srcset="https://tbmdcnd.xyz/p/v2/w1/4mmrctVVPKPFpPB0B.webp" type="image/webp">
+                        <!-- <img src="assets/images/gru.webp" alt="Gru"> -->
+                    </div>
+                    <div class="card__item__body">
+                        <h4 read>Thor: Love and Thunder</h4>
+                        <p>
+                            <span class="calf">3.5/5</span>  2h 28m  2022 <span class="quality">HD</span>
+                        </p>
+                        <p>
+                            Sinopsis: Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero quod et aliquam odio quam ea quisquam illum voluptates ex saepe fuga commodi neque deserunt doloribus explicabo animi sunt? Dicta.
+                        </p> 
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="card__item">
+                    <div class="card__item__img">
+                        <img src="assets/images/One Piece Luffy.webp" alt="Luffy">
+                    </div>
+                    <div class="card__item__body">
+                        <h4>Thor: Love and Thunder</h4>
+                        <p>
+                            <span class="calf">3.5/5</span>  2h 28m  2022 <span class="quality">HD</span>
+                        </p>
+                        <p>
+                            Sinopsis: Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero quod et aliquam odio quam ea quisquam illum voluptates ex saepe fuga commodi neque deserunt doloribus explicabo animi sunt? Dicta.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="card__item">
+                    <div class="card__item__img">
+                        <img src="assets/images/One Piece Luffy.webp" alt="Luffy">
+                    </div>
+                    <div class="card__item__body">
+                        <h4>Thor: Love and Thunder</h4>
+                        <p>
+                            <span class="calf">3.5/5</span>  2h 28m  2022 <span class="quality">HD</span>
+                        </p>
+                        <p>
+                            Sinopsis: Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero quod et aliquam odio quam ea quisquam illum voluptates ex saepe fuga commodi neque deserunt doloribus explicabo animi sunt? Dicta.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="card__item">
+                    <div class="card__item__img">
+                        <img src="assets/images/One Piece Luffy.webp" alt="Luffy">
+                    </div>
+                    <div class="card__item__body">
+                        <h4>Thor: Love and Thunder</h4>
+                        <p>
+                            <span class="calf">3.5/5</span>  2h 28m  2022 <span class="quality">HD</span>
+                        </p>
+                        <p>
+                            Sinopsis: Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero quod et aliquam odio quam ea quisquam illum voluptates ex saepe fuga commodi neque deserunt doloribus explicabo animi sunt? Dicta.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </aside>
+</main>
+    <footer>
+        <section class="footer__body">
+            <div class="footer__body__links">
+                <div>
+                    <a href="">
+                        <img src="https://b.entrepeliculasyseries.me/peliculasyseries/logomin.png" alt="">
+                    </a>
+                    <p>Entrepeliculasyseries</p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div>
+                Copycat de <b>DanielAquilinoNdong</b>, <i>dale al logo para ir a la pagina original</i>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1077 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --background: #080f28;
+    --backgroundOpacity: #080f2892;
+    --link: rgb(234, 233, 233);
+    --inputBackground: rgba(50, 52, 105, 0.485);
+    --infoadicional: rgb(249, 166, 24); 
+    --buttonColor: rgb(10, 141, 255);
+}
+
+/* Le damos estilos a los placeholder */
+::placeholder{
+    color: rgb(130, 150, 169);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+
+/* DISPOSITVOS MOVILES */
+@media only screen and (min-width: 320px ){
+
+/* EL HEADER-------------------- */
+.header{
+    position: relative;
+    display: grid;
+    background: url("/Practica-leccion13/assets/images/gru.webp") center/cover no-repeat scroll ;
+    /* object-fit: cover; */
+    /* grid-template-columns: repeat(1, minmax(min-content, max-content)); */
+}
+
+.header > nav {
+    position: fixed;
+    top: 0px;
+    height: 4.8rem;
+    width: 100%;
+    box-shadow: inset 0px 30px 27px rgba(8, 15, 40, 0.526);
+    background-color: #0e142d;
+    z-index: 3;
+}
+
+
+
+/* NAV DEL HEADER */
+.header__nav__container{
+    /* background-color: var(--background); */
+    height: 100%;
+}
+
+.nav__link__container{
+    height: 100%;
+    margin: 0 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuBoton{
+    background-color: rgb(0, 89, 255);
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.nav__link__container > a > img{
+    width: 87%;
+}
+
+/* ul y los li */
+.header__list,
+.nav__form__container{
+    display: none;
+}
+
+/* section container*/
+.header__caroussel__container{
+    /* display: none; */
+    padding: 5rem 1.5rem 0;
+    height: 100vh;
+    background: linear-gradient( rgba(8, 15, 40, 0.675) 25%,rgba(76, 95, 143, 0.282) 50%, rgba(8, 15, 40, 0.961) 90%);
+}
+
+.caroussel__item__body{
+    height: 75vh;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.caroussel__item__body > header h2{
+    /* position: relative; */
+    color: #fff;
+    font-size: 2rem;
+}
+.caroussel__item__body > header h2::after{
+    content: "PELICULA";
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+    width: 1rem;
+    padding: .25rem;
+    border-radius: 1rem;
+    background-color: orange;
+    color: #000;
+    font-size: .5rem;
+    letter-spacing: 1;
+    margin-left: .5rem;
+    
+}
+
+.caroussel__item__body div:nth-child(2) p{
+    font-size: .9rem;
+    width: 11rem;
+    display: flex;
+    justify-content: space-between;
+}
+.caroussel__item__body div:nth-child(3) p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* calificacion y calidad */
+.calf{
+    color: orange;
+}
+.quality{
+    padding: .2rem;
+    border-radius: .5rem;
+    background-color: orange;
+    font-size: .6rem;
+    color: #000;
+    letter-spacing: 1;
+    font-weight: bold;
+}
+
+.caroussel__item__body div{
+    color: #c4d0f2;
+    letter-spacing: 1;
+}
+
+.caroussel__item__body > a {
+    position: relative;
+    width: 10rem;
+    min-width: min-content;
+    padding: 1rem .9rem; 
+    color: #fff;
+    border-radius: 4rem;
+    background-color: rgb(0, 89, 255);
+    letter-spacing: 1;
+    text-align: center;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.caroussel__item__body > a::before{
+    margin-right: .5rem;
+}
+
+.caroussel__item__body > a:active{
+    transform: scale(1);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.caroussel__pointer{
+    width: 9rem;
+    display: flex;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.caroussel__pointer > div{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: rgb(91, 123, 183);
+    margin: 0 5px;
+    transform-origin: left;
+    transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.caroussel__pointer > div:active{
+    background-color: rgb(0, 89, 255);
+    border-radius: 10px;
+    margin: 0 5px;
+   /*  transform: scaleX(2); */
+   /*  flex-grow: 1; */
+    width: 40px;
+}
+
+
+/* FIN DEL HEADER -------------------------- */
+
+
+/* COMIENZO DEL MAIN 
+  DIVISION DE SECCIONES:
+    - Primera sección "ENTREPELICULASYSERIES"
+    - Segunda sección "PLEICULAS ONLINE"
+    - Tercera seccion "SERIES ONLINE"
+    - Cuarta sección  "FILTRAR PELICULAS"
+    - Quinta sección  "TOP ESTRENOS"
+*/
+
+
+/* Le damos un padding en los lados del main */
+main{
+    padding:  3rem 1.5rem 0;
+    background-color: rgb(8, 15, 40);
+    background-image: linear-gradient(0deg, rgb(8, 15, 40), rgb(11, 19, 43));
+}
+/* Le damos color a los titulos del main */
+main h2,
+main h3{
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.lastEntry__body__container{
+    overflow-x: scroll;
+}
+
+/* Oculatamos la etiqueta que pone "Ver más series" */
+.lastEntry__header div:nth-child(2){
+    display: none;
+}
+
+.lastEntry__header h2{
+    line-height: 1.3;
+}
+
+/* Le damos propiedades al contenedor para que al hacer scroll horizontal se 
+ajuste al centro del contenedor siempre */
+
+
+.lastEntry__body{
+    width: 400%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 .8rem 1.6rem;
+    scroll-snap-type: x mandatory;
+}
+
+
+/* Las imagenes del "lastentry" */
+.lastEntry__body > .lastEntry__body__items{
+    width: calc(100% / 5);
+    height: 100%;
+    background-color: orange;
+    scroll-snap-align: center;
+    border-radius: .9rem;
+    -webkit-border-radius: .9rem;
+    -moz-border-radius: .9rem;
+    -ms-border-radius: .9rem;
+    -o-border-radius: .9rem;
+}
+
+.lastEntry__pointers{
+    width: 8rem;
+    margin: auto;
+    display: flex;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.lastEntry__pointers > a{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(91, 123, 183);
+    margin: 0 3px;
+    transform-origin: left;
+    transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.lastEntry__random__image{
+    margin-top: .8rem;
+    background-color: purple;
+    height: 13rem;
+    overflow: hidden;
+    border-radius: .7rem;
+    -webkit-border-radius: .7rem;
+    -moz-border-radius: .7rem;
+    -ms-border-radius: .7rem;
+    -o-border-radius: .7rem;
+}
+
+.lastEntry__random__image > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SECCION "PELICULAS ONLINE */
+
+.onlineFilm{
+    margin-top: 4rem;
+}
+
+/* El contenedor del 'ul' */
+.onlineFilm__header > div:nth-child(2){
+    position: relative;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+    height: 2rem;
+    overflow-x: scroll;
+}
+
+.onlineFilm__header > div:nth-child(2) > ul{
+    position: absolute;
+    width: calc(100% + 51%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.onlineFilm__header > div:nth-child(2) li{
+    height: 1.6rem;
+    padding-bottom: .2rem;
+    color: #6375b4;
+}
+
+.onlineFilm__header > div:nth-child(2) li.active{
+    border-bottom: solid rgb(247, 247, 12);
+    color: var(--link);
+    font-weight: bold;
+}
+
+/* Contener del grid */
+.onlineFilm__body{
+    display: grid;
+    grid-template-columns:  repeat(2, minmax(130px, 1fr));
+    grid-template-rows: repeat(4, 230px);
+    gap: 52px 15px;
+    margin-bottom: 2rem;
+}
+
+.onlineFilm__body__item{
+    background-color: rgb(26, 26, 71);
+    margin-bottom: 2rem;
+}
+
+.onlineFilm__body__item .item {
+    position: relative;
+    color: var(--link);
+    text-align: center;
+}
+
+.onlineFilm__body__item .item::before{
+    position: absolute;
+    content: "2022";
+    top: 10.5rem;
+    right: .5rem;
+    width: 2rem;
+    height: 1rem;
+    padding: .2rem .5rem;
+    background-color: #004fec;
+    line-height: 1.03rem;
+    font-size: .8rem;
+    letter-spacing: 1;
+    z-index: 2;
+    border-radius: .8rem;
+    -webkit-border-radius: .8rem;
+    -moz-border-radius: .8rem;
+    -ms-border-radius: .8rem;
+    -o-border-radius: .8rem;
+}
+
+figcaption{
+    margin-top: .5rem;
+}
+
+.onlineFilm__body__item .item img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
+.btn__cargarPeliculas{
+    margin:  2rem 0 4rem 0;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: #405190;
+    font-size: 1rem;
+    color: var(--link);
+    border: none;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+}
+
+/* SECCION DE 'SERIES ONLINE' */
+
+.seriesOnline__header div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.seriesOnline__header > div:nth-child(1) > h2{
+    font-size: 2rem;
+}
+
+.seriesOnline__header > div:nth-child(1) > a{
+    background-color: #2b71fb;
+    padding: .5rem .9rem;
+    font-size: .7rem;
+    text-transform: uppercase;
+    color: var(--link);
+    border-radius: 11rem;
+    -webkit-border-radius: 11rem;
+    -moz-border-radius: 11rem;
+    -ms-border-radius: 11rem;
+    -o-border-radius: 11rem;
+}
+
+/* Contenedor ul de la seccion 'Series Online' */
+/* El contenedor del 'ul' */
+.seriesOnline__header > div:nth-child(2){
+    position: relative;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+    height: 2rem;
+    overflow-x: scroll;
+}
+
+.seriesOnline__header  > div:nth-child(2) > ul{
+    position: absolute;
+    width: calc(100% + 51%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.seriesOnline__header  > div:nth-child(2) li{
+    height: 1.6rem;
+    padding-bottom: .2rem;
+    color: #6375b4;
+}
+
+.seriesOnline__header  > div:nth-child(2) li.active{
+    border-bottom: solid rgb(247, 247, 12);
+    color: var(--link);
+    font-weight: bold;
+}
+
+.seriesOnline__body{
+    
+    overflow-x: scroll;
+}
+
+.seriesOnline__container{
+    width: 400%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 .8rem 0rem;
+    background-color: rgb(247, 247, 111);
+}
+
+.seriesOnline__body__item{
+    width: calc(100% / 4.5);
+    height: 10rem;
+    background-color: lightblue;
+}
+
+.languages__section div:nth-child(1){
+    margin: 2.2rem 0 1.5rem;
+    background-color: #181f35;
+    text-align: center;
+    padding: .8rem .9rem;
+    border-radius: .2rem;
+    -webkit-border-radius: .2rem;
+    -moz-border-radius: .2rem;
+    -ms-border-radius: .2rem;
+    -o-border-radius: .2rem;
+}
+
+.languages__section div:nth-child(1) > h3{
+    font-size: .8rem;
+    color: #6375b4;
+}
+
+.languages__section div:nth-child(2){
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top__estrenos {
+    width: 100%;
+    height: auto;
+}
+.top__estrenos > div:nth-child(1){
+    margin: 2.2rem 0 1.5rem;
+    background-color: #181f35;
+    text-align: center;
+    padding: .8rem .9rem;
+    border-radius: .2rem;
+    -webkit-border-radius: .2rem;
+    -moz-border-radius: .2rem;
+    -ms-border-radius: .2rem;
+    -o-border-radius: .2rem;
+}
+
+.top__estrenos > div:nth-child(1) > h3{
+    font-size: .8rem;
+    color: #6375b4;
+}
+
+
+.top__estrenos article{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.top__estrenos article::before{
+    position: absolute;
+    content: "#3";
+    top: -8;
+    left: 13px;
+    width: 3rem;
+    height: 3rem;
+    background-color: #004fec;
+    color: var(--link);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: var(--background) solid 6px;
+    z-index: 1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.top__estrenos article:nth-child(2)::before{
+    content: "#1";
+}
+
+/* Card de la seccion de "Top Estrenos" */
+.card__item{
+    position: relative;
+    width: 80%;
+    height: 17rem;
+    margin: auto;
+    display: flex;
+    flex-wrap:  wrap;
+    margin-bottom: 2rem;
+    outline: #36436e solid 1px;
+    background-color: #131f44;
+    border-bottom: solid .6rem #131f44;
+    overflow: hidden;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.card__item__img{
+    width: 100%;
+    height: 65%;
+}
+
+.card__item__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.card__item__img:active img{
+    opacity: 0.7;
+    backdrop-filter: blur(70px);
+    transition: all .69s ease-in-out;
+    -webkit-transition: all .69s ease-in-out;
+    -moz-transition: all .69s ease-in-out;
+    -ms-transition: all .69s ease-in-out;
+    -o-transition: all .69s ease-in-out;
+}
+
+
+.card__item__body{
+    padding: .8rem .8rem .4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: .8rem;
+    background-color: rgba(19, 31, 68, 0.572);
+    z-index: 2;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+.card__item__body > p:nth-child(2){
+    color: #687293;
+    margin: .3rem 0 .4rem;
+    text-align: justify;
+}
+
+
+.card__item__img:active + .card__item__body{
+    background-color: rgba(19, 31, 68, 0.572);
+    transform: translateY(-60%);
+    -webkit-transform: translateY(-60%);
+    -moz-transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+    -o-transform: translateY(-60%);
+    transition: all .8s ease-in-out;
+    -webkit-transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    -ms-transition: all .8s ease-in-out;
+    -o-transition: all .8s ease-in-out;
+}
+
+
+}
+
+@media only screen and (min-width: 375px){
+    .nav__link__container > a > img{
+        width: 13rem;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+
+/*Encabezado de la pagina*/
+.header{
+    position: relative;
+    height: 29.5rem;
+    /* z-index: 2; */
+}
+
+/* ---- AQUI INICIA EL NAV-HEADER */
+.header nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: var(--backgroundOpacity);
+    z-index: 2;
+}
+
+
+.header__nav__container{
+    width: 80.5%;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Es es el contenedor del logoy el <ul> */
+.nav__link__container{
+    display: flex;
+}
+
+.nav__link__container > a{
+    display: flex;
+    align-items: center;
+}
+
+/* Es es el <ul> del encabezado */
+.header__list{
+    margin-left: 1.5rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header__list > li{
+    margin: 0 1.3rem 0 1.3rem;
+    color: var(--link);
+    letter-spacing: 1;
+    font-size: 1rem;
+}
+
+/* Form del input:search del nav que esta en el header */
+.nav__form__container > form{
+    display: flex;
+    justify-content: center;
+}
+
+/* El contenedor del input_search del nav */
+.nav__form__container > form > div{
+    padding: .8rem 1rem;
+    width: 8.5rem;
+    border: 1px solid rgb(2, 50, 98);
+    border-radius: 5rem;
+    background-color: rgba(1, 29, 57, 0.274);
+}
+
+.nav__form__container > form input{
+    width: 100%;
+    background-color: transparent;
+    color: var(--link);
+    font-size: .9rem;
+    border: none;
+    outline: none;
+}
+
+
+/* ***** FIN DEL NAV-HEADER ***** */
+
+
+/* CAROUSSEL DEL HEADER */
+.header__caroussel__container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    overflow: hidden;
+}
+
+.caroussel__container{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-type: x proximity;
+}
+
+/* Cada contener del caroussel  */
+.caroussel__item{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--backgroundOpacity);
+    scroll-snap-align: center;
+}
+
+
+.caroussel__item__body{
+    margin-bottom: 2rem;
+    width: 80.5%;
+    height: 52%;
+    margin-top: 4rem;
+    color: var(--link);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.caroussel__item__body > header{
+    display: flex;
+    width: 46rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.caroussel__item__body > header > h2{
+    font-size: 3rem;
+    margin-right: .3rem;
+}
+
+/* La palabra 'PELICULA' del header*/
+.caroussel__item__body > header > div{
+    padding: .2rem .3rem;
+    background-color: var(--infoadicional);
+    border-radius: 50px;
+    font-size: .4rem;
+    font-weight: bold;
+    color:rgb(38, 37, 37);
+}
+
+/* La palabra 'HD' del header */
+.caroussel__item__body .quality{
+    padding: .2rem .4rem;
+    background-color: var(--infoadicional);
+    border-radius: 50px;
+    font-size: .6rem;
+    font-weight: bold;
+    color:rgb(38, 37, 37);
+}
+
+.caroussel__item__body .calf{
+    padding: .3rem .4rem;
+    color: var(--infoadicional);
+    border-radius: 50px;
+    font-weight: 400;
+} 
+
+.caroussel__item__body > div:nth-child(3){
+    margin: 2rem 0;
+    font-size: 1.3rem;
+    color: var(--link);
+}
+
+.caroussel__item__body > div:nth-child(4){
+    width: 7rem;
+    padding: .9rem 1.4rem;
+    border-radius: 2rem;
+    background-color: var(--buttonColor);
+    font-weight: 400;
+    letter-spacing: 1;
+    text-align: center;
+}
+
+.caroussel__item__body > div:nth-child(4) > a {
+    color: #fff;
+}
+
+
+/* ENTRAMOS EN EL MAIN */
+main{
+    min-width: 50rem;
+    max-width: 100%;
+    padding: 0 8.2rem;
+    display: flex;
+    background-color: var(--background);
+}
+
+h2,h3{
+    color: var(--link);
+}
+
+.container{
+    width: 73%;
+    height: 100%;
+    margin-right: 2rem;
+}
+
+.lastEntry{
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+/* La primera section de la pagina */
+.lastEntry__header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lastEntry__header > div:nth-child(2){
+    padding: .4rem 1rem;
+    border-radius: 2rem;
+    background-color: var(--buttonColor);
+    font-weight: 400;
+    color: var(--link);
+    font-size: .9rem;
+}
+
+/* Damos flex al primer contendor de 'lasEntry__header' */
+.lastEntry__header > div:nth-child(1){
+    display: flex;
+}
+
+/* Aplicamos margen al primer h2 de 'lastEntry_header' */
+.lastEntry__header > div:nth-child(1) > h2:nth-child(1){
+    margin-right: 1.1rem;
+}
+
+/* Contenedor de las cards de la primer seccion */
+.lastEntry__body{
+    display: flex;
+    width: 100%;
+    height: 7rem;
+    justify-content: space-between;
+}
+
+.lastEntry__body__items{
+    width: 23%;
+    height: 90%;
+    background-color: lightcoral;
+    border-radius: .4rem;
+}
+
+
+
+.onlineFilm__header{
+    display: flex;
+    align-items: center;
+}
+
+.onlineFilm__header > ul{
+    display: inline-flex;
+    color: var(--link);
+}
+
+.onlineFilm__body{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 18rem);
+    /* grid-auto-rows: minmax(200px,200px); */
+    gap: 15px;
+}
+
+.onlineFilm__body__item{
+    background-color: rgb(232, 221, 10);
+    border-radius: .3rem
+}
+
+.onlineFilm > button{
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    background-color: rgb(80, 80, 176);
+    border-radius: 10rem;
+    color: var(--link);
+    font-size: .9rem;
+}
+
+.seriesOnline{
+    margin-top: 4.5rem;
+}
+
+.seriesOnline__header{
+    margin-bottom: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seriesOnline__header > div{
+    display: flex;
+    align-items: center;
+    color: var(--link);
+}
+
+.seriesOnline__header ul{
+    display: inline-flex;
+    margin-left: 2rem;
+    color: var(--link);
+}
+
+
+.seriesOnline__body__item{
+    border-radius: .3rem;
+    background-color: lightsalmon;
+}
+
+
+/* El ASIDE  */
+main > aside{
+    width: 27%;
+    background-color: var(--background);
+    display: grid;
+    grid-template-rows: 230px 150px auto ;
+    gap: 25px
+}
+
+.aside__section__bigImage{
+    background-color: lightskyblue;
+}
+
+.aside__section__languages{
+    background-color: lightgrey;
+}
+
+.aside__section__languages > div:nth-child(1){
+    height: 50px;
+    display: flex;
+    background-color: rgb(28, 30, 50);
+    justify-content: center;
+    align-items: center;
+    font-size: .6rem;
+    font-weight: 400;
+    letter-spacing: 2;
+    border-radius: .2rem;
+}
+
+.aside__section__films{
+    background-color: lightsteelblue;
+}
+
+.aside__section__films > div:nth-child(1){
+    height: 50px;
+    display: flex;
+    background-color: rgb(28, 30, 50);
+    justify-content: center;
+    align-items: center;
+    font-size: .6rem;
+    font-weight: 400;
+    letter-spacing: 2;
+    border-radius: .2rem;
+    margin-bottom: 1.1rem;
+}
+
+.card__item{
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    height: 10rem;
+}
+
+.card__item__img{
+    width: 40%;
+    background-color: lawngreen;
+    border-radius: .3rem;
+}
+
+.card__item__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .3rem;
+}
+.card__item__body{
+    margin-left: 1rem;
+    width: 60%;
+    height: 5.5rem;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* EL FOOTER */
+footer{
+    padding: 0 8.2rem;
+    padding-top: 5rem;
+    height: 15rem;
+    background-color: var(--background);
+    color: var(--link);
+}
+
+.footer__body__links > div:nth-child(1){
+    display: flex;
+    width: 25rem;
+    justify-content: space-between;
+    align-items: center;
+}
+}
